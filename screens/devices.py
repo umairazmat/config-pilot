@@ -14,7 +14,7 @@ def second_screen():
 
     logo_image = os.path.join(current_dir, r"../../public/Config Pilot Logo.png")
 
-    st.image("public\Config Pilot Logo.png", width=150)  # Placeholder for the logo
+    st.image("logo_image", width=200)  # Placeholder for the logo
 
     # Menu bar
     st.markdown(
