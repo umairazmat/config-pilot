@@ -6,22 +6,17 @@ def first_screen():
     current_dir = os.path.dirname(__file__)
     logo_image = os.path.join(current_dir, r"./../public/Config Pilot Logo.png")
 
-    st.image(logo_image, width=150)  # Placeholder for the logo
+    # Create a two-column layout for logo and title
+    col1, col2 = st.columns([2, 4])  # Adjust column widths as needed
+    with col1:
+        st.image(logo_image, width=200)  # Display the logo
 
-    # Menu bar with navigation links using Streamlit buttons
-    st.markdown(
-        """
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="flex: 1;"></div>
-        <div style="flex: 1; text-align: right;">
-            <a href="#" onclick="st.session_state['screen'] = 'intro';">Routers</a> | 
-            <a href="#" onclick="st.session_state['screen'] = 'device_selection';">Switches</a> | 
-            <a href="#" onclick="st.session_state['screen'] = 'device_selection';">Servers</a>
-        </div>
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
+    with col2:
+        st.title("ConfigPilot")
+        st.subheader("Simplify Your Configurations")
+        st.write(
+            "ConfigPilot automates and simplifies network device configurations for routers, switches, and servers, offering step-by-step guidance for both IT professionals and non-technical users."
+        )
 
     # Step-by-step guide (dummy data)
     st.title("How to Integrate with the App")
