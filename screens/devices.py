@@ -12,6 +12,8 @@ def second_screen():
     switch_img_path = os.path.join(current_dir, r"assets\switches.jpg")
     server_img_path = os.path.join(current_dir, r"assets\server.jpeg")
 
+    logo_image = os.path.join(current_dir, r"../../public/Config Pilot Logo.png")
+
     st.image("public\Config Pilot Logo.png", width=150)  # Placeholder for the logo
 
     # Menu bar
