@@ -1,8 +1,12 @@
 import streamlit as st
+import os
 
 
 def first_screen():
-    st.image("public\Config Pilot Logo.png", width=150)  # Placeholder for the logo
+    current_dir = os.path.dirname(__file__)
+    logo_image = os.path.join(current_dir, r"./../public/Config Pilot Logo.png")
+
+    st.image(logo_image, width=150)  # Placeholder for the logo
 
     # Menu bar with navigation links using Streamlit buttons
     st.markdown(
